@@ -2,6 +2,7 @@ import scala.swing.{Panel, MainFrame, SimpleSwingApplication}
 import java.awt.{Color, Graphics2D, Dimension}
 
 class DataPanel(data: Array[Array[Color]]) extends Panel {
+  // From http://stackoverflow.com/a/6978542/770271
 
   override def paintComponent(g: Graphics2D) {
     val dx = g.getClipBounds.width.toFloat  / data.length
@@ -25,6 +26,7 @@ class DataPanel(data: Array[Array[Color]]) extends Panel {
 
 
 object Draw extends SimpleSwingApplication {
+  // From http://stackoverflow.com/a/6978542/770271
 
   val data = Array.ofDim[Color](25, 25)
 
@@ -34,7 +36,7 @@ object Draw extends SimpleSwingApplication {
   data(0)(4) = Color.GREEN
   data(4)(0) = Color.BLUE
 
-  // draw a circle 
+  // draw a circle
   import math._
   {
     for {
