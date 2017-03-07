@@ -1,3 +1,5 @@
+package life
+
 import scala.swing.{Panel, MainFrame, SimpleSwingApplication}
 import java.awt.{Color, Graphics2D, Dimension}
 
