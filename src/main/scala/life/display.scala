@@ -1,7 +1,7 @@
 package life
 
 import scala.swing.{Panel, MainFrame, Swing, SimpleSwingApplication}
-import java.awt.{Color, Graphics2D, Dimension}
+import java.awt.{Color, Graphics2D, Dimension, Toolkit}
 
 object Timer {
   // From http://otfried.org/scala/timers.html
@@ -23,11 +23,12 @@ class DataPanel() extends Panel {
                               (27,26))
 
   val frameDelay = 500 // 500 milliseconds
-  Timer(500)
+  Timer(100)
     {
       //TODO don't hardcode dims
       currentGeneration = Life.iterate(currentGeneration, (300/5, 300/5))
       this.repaint()
+      Toolkit.getDefaultToolkit().sync();
     }
 
   override def paintComponent(g: Graphics2D) {
