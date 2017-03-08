@@ -12,6 +12,9 @@ class LifeSuite extends FunSuite {
   test("the generation following an empty generation is empty") {
     assert(iterate(Set(), (1,2)) === Set())
   }
+  test("the generation following a one-cell generation is empty") {
+    assert(iterate(Set((0,0)), (1,2)) === Set())
+  }
 
   test("a cell in an empty generation has no neighbors") {
     assert(neighborCount((1,2), Set()) === 0)
