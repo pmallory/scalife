@@ -23,6 +23,4 @@ object Life {
     } yield (row, col)).length
   }
 
-
-
 }
